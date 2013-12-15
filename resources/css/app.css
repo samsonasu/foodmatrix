@@ -1,0 +1,16 @@
+#splash-page {
+  background-color: white;
+}
+#logo {
+  background: url('../img/ionic.png') no-repeat transparent;
+  width: 128px;
+  height: 128px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -64px 0 0 -64px;
+}
+
+.button-gray {
+  color: #ccc;
+}

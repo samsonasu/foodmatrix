@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title><%= @meta[:title] %></title>
+        <meta name="description" content="<%= @meta[:description] %>" />
+        <% @stylesheets.each do |ss| -%>
+            <link rel="stylesheet" href="<%= ss %>" type="text/css" />
+        <% end -%>
+        <% if @platform != 'web' -%>
+            <% if @environment == 'development' -%>
+                <script type="text/javascript">
+                    window.onerror = function(e,u,l) {
+                      alert("Error caught" + e + " " + u + ":" + l);
+                    };
+                </script>
+            <% end -%>
+        <% end -%>
+        <%= @high_five_javascript %>
+        <%- @javascripts.each do |js| -%>
+            <script type="text/javascript" src="<%= js %>"></script>
+        <%- end -%>	
+
+    </head>
+      <!-- 'starter' is the name of this angular module (js/app.js)-->
+      <body ng-app="foodmatrix">
+
+        <!-- Our navigation router with some animations set -->
+        <pane nav-router animation="slide-left-right-ios7">
+          <!-- The nav bar that will be updated as we navigate -->
+          <nav-bar class="nav-title-slide-ios7" type="bar-positive" back-button-type="button-icon" back-button-icon="icon ion-arrow-left-c"></nav-bar>
+
+          <!-- where the content of each page will be rendered -->
+          <ng-view></ng-view>
+        </pane>
+      </body>
+</html>
+

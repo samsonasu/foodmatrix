@@ -1,0 +1,24 @@
+<!-- This form is used to edit or create new lists -->
+<header class="bar bar-header bar-positive">
+  <h1 class="title">{{title}}</h1>
+  <button class="button button-clear button-positive" ng-click="back()">Cancel</button>
+</header>
+<content has-header="true">
+  <div class="padding">
+    <div class="list">
+      <label class="item item-input">
+        <span class="input-label">Name</span>
+        <input type="text" placeholder="" ng-model="list.name">
+      </label>
+      Things you want to rate (&quot;Overall&quot; will be added automatically)
+      <button class="button button-balanced button-block icon ion-plus" ng-click="addAttribute()">Add Attribute</button>
+      <fieldset>
+        <label class="item item-input item-icon-right" ng-repeat="attribute in list.attributes">
+          <button class="button button-assertive button-clear icon ion-close" ng-click="removeAttribute(attribute)"></button>
+          <input type="text" placeholder="ex. taste, price, etc." ng-model="attribute.name">
+        </label>
+      </fieldset>
+      <button class="button button-full button-positive" ng-click="save()">Save</button>
+    </div>
+  </div>
+</content>
