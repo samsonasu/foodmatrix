@@ -8,15 +8,17 @@
         type: 'button-clear ion-plus',
         content: "Add Item",
         tap: function() {
-          var newId;
+          var newId, path, _base;
           newId = new Date().getTime();
+          (_base = $scope.list).items || (_base.items = []);
           $scope.list.items.push({
             id: newId,
             ratings: {}
           });
           Lists.save($scope.list);
           debugger;
-          return $location.path("#/lists/" + $scope.list.id + "/items/" + newId);
+          path = "/lists/" + $scope.list.id + "/items/" + newId;
+          return $location.path(path);
         }
       }
     ];

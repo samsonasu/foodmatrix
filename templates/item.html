@@ -1,6 +1,9 @@
-<nav-page title="item.name">
+<nav-page title="item.name" right-buttons="rightButtons">
   <content has-header="true" padding="true">
-    <input ng-model="item.name">
+    <label class="item item-input">
+      <span class="input-label">Name</span>
+      <input type="text" placeholder="Pizza Places..." ng-model="item.name">
+    </label>
     <div>Item ID: {{item.id}}</div>
     <p>Rate this item in the following categories</p>
     <div class="list">
@@ -13,5 +16,6 @@
         </div>
       </div>
     </div>
+    <button class="button button-block button-outline button-balanced button-icon ion-disk" ng-click="save()">Save</button>
   </content>
 </nav-page>

@@ -7,12 +7,12 @@
   <tabs tabs-style="tabs-icon-top" tabs-type="tabs-positive" animate-nav="false">
     <tab title="Lists" icon="icon ion-home" ng-controller="ListsCtrl" right-buttons="rightButtons">
       <content has-header="true" has-tabs="true">
-        <div class="list">
+        <list>
           <link-item ng-repeat="list in lists" type="item-text-wrap item-icon-left" href="#/lists/{{list.id}}">
-              <a href="#/lists/{{list.id}}/edit" class="icon ion-settings"></a> <span>{{list.name}}</span>
+              <i ng-click="editList($event, list.id)" class="energized icon ion-gear-b"></i> <span>{{list.name}}</span>
             </item>
           </link-item>
-        </div>
+        </list>
       </content>
     </tab>
 

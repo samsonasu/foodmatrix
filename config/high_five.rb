@@ -14,7 +14,7 @@ HighFive::Config.configure do |config|
 
   # config.javascripts "http://maps.google.com/maps/api/js?sensor=true"
   # config.javascripts "lib/jquery-min.js"
-  config.javascripts "https://cdn.firebase.com/v0/firebase.js"
+  # config.javascripts "https://cdn.firebase.com/v0/firebase.js"
 
   # Run `compass compile` in this directory before doing anything
   # config.compass "resources/sass"

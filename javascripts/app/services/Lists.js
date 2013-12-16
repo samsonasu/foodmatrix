@@ -18,8 +18,8 @@ angular.module('foodmatrix.services').factory('Lists', function() {
           { id: 3, name: "O'Grady's"}
         ]
       },
-      2: { id: 2, name: 'Red Wine'},
-      3: { id: 3, name: 'Chicken Wings'}
+      2: { id: 2, name: 'Red Wine', attributes: []},
+      3: { id: 3, name: 'Chicken Wings', attributes: []}
     };
   }
 

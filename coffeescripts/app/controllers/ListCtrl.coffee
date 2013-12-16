@@ -6,10 +6,12 @@ angular.module('foodmatrix.controllers').controller 'ListCtrl', ($scope, $routeP
       content: "Add Item",
       tap: ->
         newId = new Date().getTime()
+        $scope.list.items ||= []
         $scope.list.items.push
           id: newId
           ratings: {}
         Lists.save($scope.list)
         debugger
-        $location.path "#/lists/#{$scope.list.id}/items/#{newId}"
+        path = "/lists/#{$scope.list.id}/items/#{newId}"
+        $location.path path
     ]
