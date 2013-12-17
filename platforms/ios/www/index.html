@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="description" content="" />
+                    <link rel="stylesheet" href="resources/css/app.css" type="text/css" />
+                    <link rel="stylesheet" href="resources/css/ionic.css" type="text/css" />
+                                            <script type="text/javascript">
+                    window.onerror = function(e,u,l) {
+                      alert("Error caught" + e + " " + u + ":" + l);
+                    };
+                </script>
+                            <script type="text/javascript">if(typeof(window.HighFive)==='undefined'){window.HighFive={};}window.HighFive.Settings={};</script>
+            <script type="text/javascript" src="javascripts/lib/ionic.js"></script>
+            <script type="text/javascript" src="javascripts/lib/angular/angular.js"></script>
+            <script type="text/javascript" src="javascripts/lib/angular/angular-animate.js"></script>
+            <script type="text/javascript" src="javascripts/lib/angular/angular-route.js"></script>
+            <script type="text/javascript" src="javascripts/lib/angular/angular-touch.js"></script>
+            <script type="text/javascript" src="javascripts/lib/angular/angular-sanitize.js"></script>
+            <script type="text/javascript" src="javascripts/lib/ionic-angular.js"></script>
+            <script type="text/javascript" src="javascripts/app.js"></script>
+            <script type="text/javascript" src="javascripts/app/controllers.js"></script>
+            <script type="text/javascript" src="javascripts/app/controllers/ListCtrl.js"></script>
+            <script type="text/javascript" src="javascripts/app/controllers/ListFormCtrl.js"></script>
+            <script type="text/javascript" src="javascripts/app/controllers/ListItemCtrl.js"></script>
+            <script type="text/javascript" src="javascripts/app/controllers/ListsCtrl.js"></script>
+            <script type="text/javascript" src="javascripts/app/services.js"></script>
+            <script type="text/javascript" src="javascripts/app/services/Lists.js"></script>
+	
+
+    </head>
+      <!-- 'starter' is the name of this angular module (js/app.js)-->
+      <body ng-app="foodmatrix">
+
+        <!-- Our navigation router with some animations set -->
+        <pane nav-router animation="slide-left-right-ios7">
+          <!-- The nav bar that will be updated as we navigate -->
+          <nav-bar class="nav-title-slide-ios7" type="bar-positive" back-button-type="button-icon" back-button-icon="icon ion-arrow-left-c"></nav-bar>
+
+          <!-- where the content of each page will be rendered -->
+          <ng-view></ng-view>
+        </pane>
+      </body>
+</html>
+

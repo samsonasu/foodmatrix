@@ -8,7 +8,6 @@ HighFive::Config.configure do |config|
   # This will add the resources folder to all platforms (stylesheets etc.) 
   config.assets "templates"
   config.assets "resources/fonts"
-
   # Include javascript libraries
   # These get included before everything else in the app, and are *not* minified
 
@@ -28,13 +27,15 @@ HighFive::Config.configure do |config|
 
   # Configure plaform specific settings like this
   config.platform :ios do |ios|
-    ios.destination = "www-ios"
+    ios.assets "platforms/config.xml"
+    ios.destination = "platforms/ios/www"
     # ios.assets "resources/ios"
   end
 
   config.platform :android do |android|
-    android.destination = "www-android"
+    android.destination = "platforms/android/assets/www"
     # android.assets "resources/android"
+    #android.javascripts "platforms/android/platform_www/cordova.js"
   end
 
   config.platform :web do |web|

@@ -11,7 +11,6 @@ angular.module('foodmatrix.controllers').controller 'ListCtrl', ($scope, $routeP
           id: newId
           ratings: {}
         Lists.save($scope.list)
-        debugger
         path = "/lists/#{$scope.list.id}/items/#{newId}"
         $location.path path
     ]

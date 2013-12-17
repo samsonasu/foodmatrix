@@ -16,7 +16,6 @@
             ratings: {}
           });
           Lists.save($scope.list);
-          debugger;
           path = "/lists/" + $scope.list.id + "/items/" + newId;
           return $location.path(path);
         }
